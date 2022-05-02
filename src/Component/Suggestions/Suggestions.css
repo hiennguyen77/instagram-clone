@@ -1,0 +1,114 @@
+.suggestions_wrap {
+    margin-top: 70px;
+    position: fixed;
+    max-width:100%;
+    height: 100px;
+    border: none;
+    
+}
+
+.suggestions_user {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.suggestions_avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 20px;
+    cursor: pointer;
+    
+
+}
+.suggestions_user_container {
+    margin-right: 60px;
+}
+.suggestions_name {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+.sub_user_name {
+    color: #999;
+    font-weight: 400;
+}
+.switch_btn {
+    color: #0597f6;
+    border: none;
+    background-color:#f8f8f8;
+    font-weight: 500;
+    cursor: pointer;
+}
+.suggestions_for_you {
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 20px;
+    
+}
+.suggestions_for_you h4 {
+    color: #999;
+    font-size: 16px;
+}
+.suggestions_for_you p {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.suggestions_follow {
+    margin-top: 20px;
+    display: flex;
+    
+    align-items: center;
+    padding-left: 20px;
+}
+.rose_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.follow_name {
+    margin-right: 120px;
+}
+.follow_name_link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sub_follow_name{
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+.follow_btn {
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0597f6;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.footer_wrap {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.footer_wrap p {
+    font-size: 12px;
+    color: #999;
+
+}
+.footer_wrap h4 {
+    color: #999;
+    font-weight: 400;
+    margin-top: 10px;
+    font-size: 14px;
+}

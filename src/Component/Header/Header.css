@@ -1,0 +1,91 @@
+
+
+.header {
+    display: flex;
+    max-width: 100%;
+    width:  100%;
+    max-height: 50px;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+    position: fixed;
+    background-color:#fff;
+    z-index: 1;
+    top: 0;
+    
+}
+.header_container {
+    width: 935px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+
+.header_logo {
+    height: 100%;
+}
+.logo_ins {
+    max-width: 100%;
+    width: 120px;
+    height: 50px;
+}
+.header_input {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    
+}
+/* .input_icon {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    font-size: 20px;
+    padding-right: 8px;
+    text-decoration: none;
+    color: #999;
+} */
+.search_input {
+    max-width: 500px;
+    width: 250px;
+    padding: 5px 0px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    background-color:#efefef;
+    border:none;
+    border-radius: 5px;
+    font-size:16px;
+    font-weight: 300;  
+    margin-left: 65px;
+}
+
+.header_navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.home_icon, .message_icon, .create_icon,
+.trend_icon, .notification_icon {
+    font-size: 25px;
+    padding: 0 12px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    
+    
+}
+.notification_icon {
+    position: relative;
+}
+.notification_icon:hover .container {
+    display: block;
+}
+
+.nav_user_avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
