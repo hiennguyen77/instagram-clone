@@ -1,3 +1,18 @@
+.view_comment {
+    color: #999;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration-line: underline ;
+}
+.active_view_comment {
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #000;
+    text-decoration-line: underline ;
+
+}
 .comment_wrap{
     display: flex;
     

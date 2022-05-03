@@ -1,6 +1,6 @@
 import "./Suggestions.css";
-import userAvatar from "../img/nav_user.jpg";
-import userFollowAvatar from "../img/rose.jpg";
+import userAvatar from "../../img/nav_user.jpg";
+import userFollowAvatar from "../../img/rose.jpg";
 
 function Suggestions() {
 

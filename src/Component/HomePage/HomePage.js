@@ -1,7 +1,7 @@
 import { useState, createContext, memo } from "react";
-import Modal from "../Posts/modal-post/Modal";
+import Modal from "../Users/Posts/modal-post/Modal";
 import Header from "../Header/Header";
-import Layout from "../layout/Layout";
+import Layout from "../Layout/Layout";
 
 export const open_Modal = createContext();
 

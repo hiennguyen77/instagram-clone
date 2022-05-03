@@ -1,31 +1,31 @@
-import { useState, memo, useEffect, useRef } from "react";
+import { useState, memo, useRef } from "react";
 import "./Comment.css";
 import { BsEmojiSmile } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "axios";
 
-// import axios from 'axios'
-
 function Comment(props) {
-  const { postId } = props;
+  const { postId, userId } = props;
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+
   const ref = useRef();
 
   //Call Api
-  useEffect(() => {
+  const handleShowComment = () => {
     const getComment = async () => {
       try {
         const res = await axios.get(
-          `https://6266a22263e0f3825684de8d.mockapi.io/api/posts/${postId}/comments`
+          `https://6266a22263e0f3825684de8d.mockapi.io/api/users/${userId}/posts/${postId}/comments`
         );
+
         setComments(res.data);
       } catch (error) {
         console.log(error.message);
       }
     };
     getComment();
-  }, []);
+  };
 
   // handlePost
   const handlePostComment = (e) => {
@@ -33,7 +33,7 @@ function Comment(props) {
     const postComment = async (comment) => {
       try {
         const res = await axios.post(
-          `https://6266a22263e0f3825684de8d.mockapi.io/api/posts/${postId}/comments`,
+          `https://6266a22263e0f3825684de8d.mockapi.io/api/users/${userId}/posts/${postId}/comments`,
           {
             comment: comment,
             user_name: "nguyen_chi_hien",
@@ -57,7 +57,7 @@ function Comment(props) {
     const deletePost = async (id) => {
       try {
         await axios.delete(
-          `https://6266a22263e0f3825684de8d.mockapi.io/api/posts/${postId}/comments/${id}`
+          `https://6266a22263e0f3825684de8d.mockapi.io/api/users/${userId}/posts/${postId}/comments/${id}`
         );
         const newComment = comments.filter((comment) => comment.id !== id);
 
@@ -72,6 +72,13 @@ function Comment(props) {
   // refactor
   return (
     <>
+      <p
+        className={comment ? "active_view_comment" : "view_comment"}
+        onClick={handleShowComment}
+      >
+        View all comment{" "}
+      </p>
+
       {comments.map((comment, key) => (
         <div key={key}>
           <div className="comment_wrap">

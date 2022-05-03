@@ -1,6 +1,6 @@
 
 import './Notification.css';
-import userFollowAvatar from '../img/rose.jpg'
+import userFollowAvatar from '../../img/rose.jpg'
 
 function Notification() {
 

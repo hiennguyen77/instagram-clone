@@ -1,7 +1,7 @@
 import './Login.css';
-import loginImage from '../img/instagram-on-iphone-12-free-mockup-2.png';
-import loginLogo from '../img/Instagram_logo.svg.png';
-import logoFb from '../img/facebook-icon.png';
+import loginImage from '../../img/instagram-on-iphone-12-free-mockup-2.png';
+import loginLogo from '../../img/Instagram_logo.svg.png';
+import logoFb from '../../img/facebook-icon.png';
 
 
 function Login() {

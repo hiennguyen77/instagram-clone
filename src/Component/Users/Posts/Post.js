@@ -1,12 +1,13 @@
 import { useState, useContext, memo, useEffect, createContext } from "react";
 import axios from 'axios'
-import { open_Modal } from "../HomePage/HomePage";
+import { open_Modal } from "../../HomePage/HomePage";
+
 
 // import { FcLike } from "react-icons/fc";
 import { FiHeart } from "react-icons/fi";
 import { FcLike } from "react-icons/fc";
 import "./Post.css";
-import Comment from "./comment/Comment";
+import Comment from "./Comments/Comment";
 import { RiMoreFill } from "react-icons/ri";
 
 import { BsChat } from "react-icons/bs";
@@ -15,7 +16,8 @@ import { BsBookmark } from "react-icons/bs";
 
 // import axios from 'axios'
 
-function Post() {
+function Post(props) {
+  const { userId } = props
   const openModal = useContext(open_Modal);
   const [posts, setPosts] = useState([]);
   
@@ -25,7 +27,7 @@ function Post() {
     const getPost = async ()=> {
       try {
         const res = await axios.get(
-          'https://6266a22263e0f3825684de8d.mockapi.io/api/posts'
+          `https://6266a22263e0f3825684de8d.mockapi.io/api/users/${userId}/posts`
         )
         setPosts(res.data)
         // console.log(res.data)
@@ -45,10 +47,13 @@ function Post() {
   };
 
   
+ 
+  
   
 // ============================== Return ===================================
   return (
     <>
+    
       {posts.map((post, key) => (
         <div className="Post_wrap" key={key}>
           <div className="post_header">
@@ -76,8 +81,8 @@ function Post() {
           <div className="post_content">
             <h5> 999 likes</h5>
             <a href="#">nguyen_chi_hien</a> <span>{post.post_status}</span>
-            <p>View all comment</p>
-            <Comment postId={post.id}/>
+            
+            <Comment postId={post.id} userId ={userId} />
           </div>
         </div>
       ))}

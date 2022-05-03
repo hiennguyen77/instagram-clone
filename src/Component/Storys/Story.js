@@ -3,7 +3,7 @@ import "./Story.css";
 // import storyNameUser from '../img/nav_user.jpg';
 
 function Story() {
-  const [storys, setStory] = useState([]);
+  const [story, setStory] = useState([]);
   useEffect(() => {
     fetch("https://6266a22263e0f3825684de8d.mockapi.io/api/users")
       .then((res) => {
@@ -16,7 +16,7 @@ function Story() {
   // ============================= Return ============================  
   return (
     <div className="story">
-      {storys.map((story, key) => (
+      {story.map((story, key) => (
         <div className="story_container" key={key}>
           <div className="story_item">
             <img className="story_img" src={story.userAvatar} />
