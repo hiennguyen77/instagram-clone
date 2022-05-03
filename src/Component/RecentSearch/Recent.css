@@ -22,6 +22,26 @@
     right: 136px;
     box-shadow: 0 10px 60px 0 rgba(103, 151, 255, .11), 0 12px 90px 0 rgba(103, 151, 255, .11);
 }
+.recent_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recent_text {
+    padding: 10px 0px 10px 10px;
+    font-weight: 500;
+}
+.recent_text_clear {
+    padding-right: 10px;
+    color: #0095f6;
+    font-weight: 500;
+    font-size: 16px;
+}
+.clear_all_btn {
+    border: none;
+    background-color:#fff;
+    cursor: pointer;
+}
 .list_recent_container {
     margin: 20px 0px 10px 0px;
     opacity: 0.8;
@@ -49,10 +69,28 @@
     height: 50px;
     border-radius: 50%;
     margin-left: 10px;
+   
+}
+.recent_name_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   
 }
 .recent_name_container h6 {
     margin-left: 10px;
     color: #999;
     font-size: 14px;
     font-weight: 400;
+}
+.recent_delete {
+    position: relative;
+    font-size: 25px;
+    opacity: 0.8;
+    padding-right: 10px;
+    
+   
+    /* top: 5px;
+    left: 5px; */
 }

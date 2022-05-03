@@ -24,7 +24,7 @@ function User() {
       {users.map((user, key) => (
         <div id="user_wrap" key={key}>
           <div className="layout_post">
-            <Post userId={user.id} />
+            <Post userId={user.id} userName={user.user_Name} userAvatar={user.userAvatar} />
           </div>
         </div>
       ))}

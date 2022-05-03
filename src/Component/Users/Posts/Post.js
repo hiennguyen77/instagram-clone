@@ -17,7 +17,7 @@ import { BsBookmark } from "react-icons/bs";
 // import axios from 'axios'
 
 function Post(props) {
-  const { userId } = props
+  const { userId, userName, userAvatar } = props
   const openModal = useContext(open_Modal);
   const [posts, setPosts] = useState([]);
   
@@ -59,9 +59,9 @@ function Post(props) {
           <div className="post_header">
             <div className="post_header_container">
               <div className="post_avatar">
-                <img src={post.avatar} />
+                <img src={userAvatar} />
               </div>
-              <h6 className="post_user_name">{post.user_name}</h6>
+              <h6 className="post_user_name">{userName}</h6>
             </div>
             <div className="post_header_icon" onClick={openModal}>
               {<RiMoreFill />}
