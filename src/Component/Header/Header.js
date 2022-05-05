@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Header.css";
+import { open_Modal_create_post } from "../HomePage/HomePage";
 import Notification from "../Notification/Notification";
+import TableProfile from "./TableProfile/TableProfile";
 import Recent from "../RecentSearch/Recent";
 import logoHeader from "../../img/Instagram_logo.svg.png";
 import navUserAvatar from "../../img/nav_user.jpg";
@@ -16,12 +18,19 @@ import { Link } from "react-router-dom";
 // import {CgSearch} from 'react-icons/cg';
 
 function Header() {
+  const openModalCreate = useContext(open_Modal_create_post);
+
   const [openNotification, setOpenNotification] = useState(false);
+  const [openTableProfile, setOpenTableProfile] = useState(false);
   const [openRecent, setOpenRecent] = useState("");
 
   //Handle Notification click
   const handleNotification = () => {
     setOpenNotification(openNotification === true ? false : true);
+  };
+  //handleOpenTableProfile
+  const handleOpenTableProfile = () => {
+    setOpenTableProfile(openTableProfile === true ? false : true);
   };
   //Handle recentSearch
   const handleOpenRecent = (e) => {
@@ -30,6 +39,7 @@ function Header() {
   //handleSubmitSearchInput
   const handleSubmitSearchInput = (e) => {
     e.preventDefault();
+    //chua xu lí logic
   };
 
   // =========================== Return ====================================
@@ -61,20 +71,26 @@ function Header() {
             <Link className="message_icon" to="/inbox">
               <RiMessengerLine />
             </Link>
-            <a className="create_icon" href="/">
+            <div className="create_icon" onClick={openModalCreate}>
               <FiPlusSquare />
-            </a>
+            </div>
             <a className="trend_icon" href="/">
               <ImCompass2 />
             </a>
-            <a className="notification_icon" onClick={handleNotification}>
+            <div className="notification_icon" onClick={handleNotification}>
               {openNotification ? <FaHeart /> : <FiHeart />}
-            </a>
+            </div>
             {openNotification && <Notification />}
           </div>
-          <div className="nav_user">
-            <img className="nav_user_avatar" src={navUserAvatar} />
+          <div className="nav_user" onClick={handleOpenTableProfile}>
+            <img
+              className={
+                openTableProfile ? "nav_user_avatar_active" : "nav_user_avatar"
+              }
+              src={navUserAvatar}
+            />
           </div>
+          {openTableProfile && <TableProfile />}
         </div>
       </div>
     </div>

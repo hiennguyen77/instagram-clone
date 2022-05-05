@@ -11,7 +11,7 @@ function Comment(props) {
 
   const ref = useRef();
 
-  //Call Api
+  //CALL API
   const handleShowComment = () => {
     const getComment = async () => {
       try {
@@ -27,7 +27,7 @@ function Comment(props) {
     getComment();
   };
 
-  // handlePost
+  // HANDLE POST COMMENT
   const handlePostComment = (e) => {
     e.preventDefault();
     const postComment = async (comment) => {
@@ -50,8 +50,8 @@ function Comment(props) {
       }
     };
     postComment(comment);
-  };
-  // handleDelete
+  };  
+  // HANDLE DELETE COMMENT
 
   const handleDelete = (id) => {
     const deletePost = async (id) => {
@@ -76,7 +76,7 @@ function Comment(props) {
         className={comment ? "active_view_comment" : "view_comment"}
         onClick={handleShowComment}
       >
-        View all comment{" "}
+        View all comment
       </p>
 
       {comments.map((comment, key) => (

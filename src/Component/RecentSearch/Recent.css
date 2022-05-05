@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .recent_text {
     padding: 10px 0px 10px 10px;

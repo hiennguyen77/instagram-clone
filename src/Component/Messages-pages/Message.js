@@ -3,9 +3,11 @@ import '../Grid/grid.css';
 import Header from '../Header/Header'
 
 
+
 function Message() {
     return (
         <>
+        
           <div className='message_wrap grid'>
             <Header />
                 <div className='message_container row'>

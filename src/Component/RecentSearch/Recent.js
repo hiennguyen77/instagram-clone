@@ -28,8 +28,9 @@ function Recent(props) {
   };
 
   //handleDeleteAll
-  const handleDeleteAll = () => {
-    setShowRecent([]);
+  const handleDeleteAll = (e) => {
+    e.preventDefault()
+    setShowRecent([])
   };
 
   return (
@@ -38,9 +39,9 @@ function Recent(props) {
         <div className="recent_wrap">
           <div className="recent_header">
             <h4 className="recent_text">Recent</h4>
-            <button className="clear_all_btn" onClick={handleDeleteAll}>
+            <div className="clear_all_btn" onClick={handleDeleteAll}>
               <h4 className="recent_text_clear">Clear All</h4>
-            </button>
+            </div>
           </div>
           {showRecent
             .filter((recent) =>

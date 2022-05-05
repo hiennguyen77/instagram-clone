@@ -1,0 +1,35 @@
+.table_wrap {
+    width: 120px;
+    /* height: 80px; */
+    position: absolute;
+    background-color:#fff;
+    top: 49px;
+    right: 210px;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 10px 60px 0 rgba(103, 151, 255, .11), 0 12px 90px 0 rgba(103, 151, 255, .11);
+    border-radius: 5px;
+}
+
+.table_item, .table_item_logout {
+    padding: 5px 0px;
+    font-size: 12px;
+    
+}
+.table_item:hover {
+    background-color:#f6f6fc;
+}
+.profile_link{
+    text-decoration: none;
+    color: #333;
+
+}
+.profile_link p{
+    padding-left: 10px;
+}
+.table_item_logout {
+    border-top: 1px solid #ccc;
+}
+.table_item_logout:hover {
+    background-color:#f6f6fc;
+}
