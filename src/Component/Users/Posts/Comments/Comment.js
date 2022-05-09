@@ -68,6 +68,8 @@ function Comment(props) {
     };
     deletePost(id);
   };
+
+  
   // ============================== Return ==========================
   // refactor
   return (

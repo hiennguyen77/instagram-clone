@@ -1,6 +1,6 @@
-import { useState, useContext, memo, useEffect, createContext } from "react";
+import { useState, useContext, memo, useEffect } from "react";
 import axios from "axios";
-import { open_Modal } from "../../HomePage/HomePage";
+import { open_Modal } from "../../../App";
 
 // import { FcLike } from "react-icons/fc";
 import { FiHeart } from "react-icons/fi";
@@ -16,9 +16,13 @@ import { BsBookmark } from "react-icons/bs";
 // import axios from 'axios'
 
 function Post(props) {
+
   const { userId, userName, userAvatar } = props;
   const openModal = useContext(open_Modal);
   const [posts, setPosts] = useState([]);
+  
+
+
 
   //Call Api
   useEffect(() => {
@@ -35,6 +39,8 @@ function Post(props) {
     };
     getPost();
   }, []);
+
+   
   //HANDLE LIKES
   const handleLike = (id) => {
     const newLike = posts.map((post) => {
@@ -42,17 +48,22 @@ function Post(props) {
       return post;
     });
     setPosts(newLike);
+    // console.log(newLike)
   };
+
+ 
+  
 
   // ============================== Return ===================================
   return (
     <>
+      
       {posts.map((post, key) => (
         <div className="Post_wrap" key={key}>
           <div className="post_header">
             <div className="post_header_container">
               <div className="post_avatar">
-                <img src={userAvatar} />
+                <img src={userAvatar} alt='#' />
               </div>
               <h6 className="post_user_name">{userName}</h6>
             </div>
@@ -61,7 +72,7 @@ function Post(props) {
             </div>
           </div>
           <div className="post_img_wrap">
-            <img className="post_img" src={post.post_img} />
+            <img className="post_img" src={post.post_img} alt='#'/>
           </div>
           <div className="post_action">
             <div className="action_icon" onClick={() => handleLike(post.id)}>
@@ -73,8 +84,8 @@ function Post(props) {
           </div>
           <div className="post_content">
             <h5> 999 likes</h5>
-            <a href="#">{userName}</a> <span>{post.post_status}</span>
-            <Comment postId={post.id} userId={userId} />
+            <a href="abc">{userName}</a> <span>{post.post_status}</span>
+            <Comment postId={post.id} userId={userId}  />
           </div>
         </div>
       ))}

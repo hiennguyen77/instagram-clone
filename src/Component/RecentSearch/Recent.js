@@ -52,7 +52,7 @@ function Recent(props) {
                 <a className="recent_link" href="#">
                   <li className="recent_list_item">
                     <div>
-                      <img src={recent.userAvatar} className="recent_avatar" />
+                      <img src={recent.userAvatar} className="recent_avatar" alt='#'/>
                     </div>
                     <div className="recent_name_container">
                       <div>

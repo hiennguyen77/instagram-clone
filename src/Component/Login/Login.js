@@ -16,7 +16,7 @@ function Login() {
                 </div>
                 <div className='login_container'>
                     <div className='login_logo'>
-                        <img className='logo_item' src ={loginLogo}/>
+                        <img className='logo_item' src ={loginLogo} alt ='logo login'/>
                     </div>
                     <form className='login_acc'>
                         <div className='login_form_email'>
@@ -33,7 +33,7 @@ function Login() {
                         <div className='login_others'>
                             <h4 className='text_or'>OR</h4>
                             <div className='login_fb'>
-                                <img className='logo_fb' src ={logoFb}/>
+                                <img className='logo_fb' src ={logoFb} alt='logo facebook'/>
                                 <a className='login_link' href='/home'>Login with facebook</a>
                             </div>
                             <span className='login_forgot'>Forgot password ?</span>

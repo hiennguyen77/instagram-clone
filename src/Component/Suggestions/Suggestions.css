@@ -62,9 +62,12 @@
 .suggestions_follow {
     margin-top: 20px;
     display: flex;
-    
+    justify-content: space-between;
     align-items: center;
     padding-left: 20px;
+}
+.follow_user {
+    display: flex;
 }
 .rose_avatar {
     width: 40px;
@@ -73,9 +76,9 @@
     margin-right: 10px;
     cursor: pointer;
 }
-.follow_name {
-    margin-right: 120px;
-}
+/* .follow_name {
+    
+} */
 .follow_name_link {
     text-decoration: none;
     color: #000;
@@ -93,6 +96,14 @@
     font-size: 12px;
     font-weight: 500;
     color: #0597f6;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.following_btn {
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
     background-color: #f8f8f8;
     cursor: pointer;
 }

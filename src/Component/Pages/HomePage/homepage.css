@@ -1,0 +1,15 @@
+.layout {
+    background-color: #f8f8f8;
+}
+.layout_wrap {
+    display: flex;
+    justify-content:center;
+    margin-left: 50px;
+    
+}
+
+.layout_container {
+    width: 935px;
+    
+    
+}

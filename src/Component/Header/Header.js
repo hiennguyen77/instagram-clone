@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import "./Header.css";
-import { open_Modal_create_post } from "../HomePage/HomePage";
+import { open_Modal_create_post } from "../../App";
 import Notification from "../Notification/Notification";
 import TableProfile from "./TableProfile/TableProfile";
 import Recent from "../RecentSearch/Recent";
@@ -48,7 +48,7 @@ function Header() {
       <div className="header_container">
         <div className="header_logo">
           <a href="/home">
-            <img className="logo_ins" src={logoHeader} />
+            <img className="logo_ins" src={logoHeader} alt ='logo' />
           </a>
         </div>
         <form onSubmit={handleSubmitSearchInput}>
@@ -88,7 +88,7 @@ function Header() {
                 openTableProfile ? "nav_user_avatar_active" : "nav_user_avatar"
               }
               src={navUserAvatar}
-            />
+             alt='nav avatar'/>
           </div>
           {openTableProfile && <TableProfile />}
         </div>

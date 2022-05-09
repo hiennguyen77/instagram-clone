@@ -1,6 +1,6 @@
 import './Message.css';
-import '../Grid/grid.css';
-import Header from '../Header/Header'
+import '../../../Grid/grid.css';
+import Header from '../../Header/Header'
 
 
 
