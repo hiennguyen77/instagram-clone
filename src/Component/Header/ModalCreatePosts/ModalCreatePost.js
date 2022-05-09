@@ -1,5 +1,5 @@
 import "./ModalCreatePost.css";
-import { AiOutlinePicture } from "react-icons/ai";
+import {BsImages} from "react-icons/bs";
 
 function ModalCreatePost(props) {
   const { closeModalCreate } = props;
@@ -19,12 +19,13 @@ function ModalCreatePost(props) {
           <h3 className="create_new_post">Create new post</h3>
         </div>
         <div className="modal_create_body">
-          <div className="create_icon">
-            <AiOutlinePicture />
+          <div >
+            <BsImages className="create_icon" />
           </div>
           <h1 className="create_text">Drags photos and videos here</h1>
 
-          <input className="create_input" type="file" />
+          <input type="file" name="file" id="file" className="create_input" />
+          <label htmlFor="file">Select from computer</label>
         </div>
       </div>
     </>

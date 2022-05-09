@@ -18,7 +18,7 @@
     border: 12px solid;
     border-color: transparent transparent #ffffff transparent;
     z-index: 1;
-    top: 8px;
+    top: 12px;
     right: 136px;
     box-shadow: 0 10px 60px 0 rgba(103, 151, 255, .11), 0 12px 90px 0 rgba(103, 151, 255, .11);
 }

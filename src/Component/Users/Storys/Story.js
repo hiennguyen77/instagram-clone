@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Story.css";
+
 // import storyNameUser from '../img/nav_user.jpg';
 
 function Story() {
@@ -15,16 +16,18 @@ function Story() {
   }, []);
   // ============================= Return ============================  
   return (
+    <>
     <div className="story">
       {story.map((story, key) => (
         <div className="story_container" key={key}>
           <div className="story_item">
-            <img className="story_img" src={story.userAvatar} />
+            <img className="story_img" src={story.userAvatar} alt='#' />
           </div>
           <p className="story_use_name">{story.user_Name}</p>
         </div>
       ))}
     </div>
+    </>
   );
 }
 

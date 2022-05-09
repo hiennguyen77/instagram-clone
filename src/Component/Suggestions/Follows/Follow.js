@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 function Follow() {
+  
   const [follows, setFollows] = useState([]);
   
 
@@ -11,6 +13,7 @@ function Follow() {
           `https://6266a22263e0f3825684de8d.mockapi.io/api/follows`
         );
         setFollows(res.data);
+       
       } catch (error) {
         console.log(error.message);
       }
@@ -27,10 +30,13 @@ function Follow() {
         return follow
     })
     setFollows(newFollow)
+    
   }
+  
 
-  return (
+  return  (
     <>
+    
       <div className="follow_wrap">
         <div className="suggestions_for_you">
           <h4>Suggestion For You</h4>
@@ -48,8 +54,9 @@ function Follow() {
               </div>
             </div>
             <button className={follow.following? 'following_btn': 'follow_btn'}
-             onClick ={()=>handleFollow(follow.id)}
+             onClick ={()=>handleFollow(follow.id)} 
              >{follow.following?'Following' : 'Follow'}
+            
             </button>
           </div>
         ))}

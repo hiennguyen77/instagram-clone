@@ -74,7 +74,7 @@ function Header() {
             <div className="create_icon" onClick={openModalCreate}>
               <FiPlusSquare />
             </div>
-            <a className="trend_icon" href="/">
+            <a className="trend_icon" href="/home">
               <ImCompass2 />
             </a>
             <div className="notification_icon" onClick={handleNotification}>
